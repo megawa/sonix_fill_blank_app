@@ -32,7 +32,7 @@ class SplashFragment: Fragment() {
             // Sentence1: スプラッシュ画面を完成させよう
             // スプラッシュ画面のアニメーションを実行しましょう
         }
-        setupObservers()
+        setUpObservers()
     }
 
     override fun onStart() {
@@ -45,7 +45,7 @@ class SplashFragment: Fragment() {
         (activity as MainActivity?)?.supportActionBar?.show()
     }
 
-    private fun setupObservers() {
+    private fun setUpObservers() {
         viewModel.logoAlphaAnimation.observe(viewLifecycleOwner, {
             binding.imageLogo.animate().alpha(it.alpha).setDuration(it.duration).setListener(null)
         })

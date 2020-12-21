@@ -26,10 +26,10 @@ class WeatherFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.onCreate()
-        setupObservers()
+        setUpObservers()
     }
 
-    private fun setupObservers() {
+    private fun setUpObservers() {
         viewModel.textTemp.observe(viewLifecycleOwner, Observer {
             binding.textTemperature.text = "${it}C°です"
         })

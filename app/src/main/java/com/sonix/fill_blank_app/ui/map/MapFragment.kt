@@ -28,10 +28,10 @@ class MapFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.onCreate()
-        setupObservers()
+        setUpObservers()
     }
 
-    private fun setupObservers() {
+    private fun setUpObservers() {
         viewModel.googleMapCallback.observe(viewLifecycleOwner, Observer {
             setUpGoogleMapCallback(it)
         })
